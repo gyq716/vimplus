@@ -208,6 +208,7 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "
 " 主题设置
 set background=dark
 let g:onedark_termcolors=256
+syntax on 
 colorscheme onedark
 
 " airline
@@ -310,7 +311,7 @@ map g/ <Plug>(incsearch-stay)
 let g:EasyMotion_smartcase = 1
 map <leader>w <Plug>(easymotion-bd-w)
 nmap <leader>w <Plug>(easymotion-overwin-w)
-
+let g:python_highlight_all = 1
 " nerdtree-git-plugin
 let g:NERDTreeGitStatusIndicatorMapCustom = {
             \ "Modified"  : "✹",
@@ -359,4 +360,6 @@ if filereadable(expand($HOME . '/.vimrc.custom.config'))
     source $HOME/.vimrc.custom.config
 endif
 
-
+" monokai color
+" syntax enable
+" colorscheme onedark 
